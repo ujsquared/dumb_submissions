@@ -4,11 +4,10 @@ using namespace std;
 int main(){
     int a,b,n;
     cin >> n >> a >> b;
-    a = n-a;
     if(n-b>a){
-        cout <<  b;
+        cout <<  b + 1;
     }
     else{
-        cout << n-a+1;
+        cout << n-a;
     }
 }
