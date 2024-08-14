@@ -1,10 +1,8 @@
-#!/bin/bash
-todayDate=$(date)
-echo "
+
 /* sol by: uj
-*  time : $todayDate
+*  time : Saturday 10 August 2024 08:17:10 PM IST
 *  rating :
-*  problemNum : $1 
+*  problemNum : 1998A 
 *  tags :
 */
 #include<bits/stdc++.h>
@@ -12,8 +10,10 @@ using namespace std;
 typedef long long ll;
 
 int main(){
+    ll t; cin >> t;
+    while(t--){
 
+    }
     return 0;
 }
-" >> "$1.cpp"
-echo "created $1.cpp"
+
