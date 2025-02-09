@@ -1,6 +1,6 @@
 
 /* sol by: uj
-*  time : Tuesday 13 August 2024 08:57:46 PM IST
+*  time : Thursday 15 August 2024 01:15:53 AM IST
 *  rating :
 *  problemNum : 2000B 
 *  tags :
@@ -9,31 +9,28 @@
 using namespace std;
 typedef long long ll;
 
-int main(){
-    ll t;cin >> t;
-    while(t--){
-        ll n; cin >> n;
-        bool flag = false;
-        vector<bool> arr;
-        for(ll i = 0 ; i <= n; i++) {
-            arr.push_back(false);
+void solve(){
+    ll n; cin >> n;
+    map<ll,bool> mp ;
+    for(ll i = 1; i <=n ; i++) mp[i] = false;
+    bool flag = false;
+    for(ll i = 0; i < n; i++){
+        ll a; cin >>a ;
+        if(i == 0 || i == n-1) mp[a] = true;
+        else if(mp[a-1] == true || mp[a+1] == true) mp[a] = true;
+        else{
+            flag = true;
         }
-        for(ll i = 1; i < n+1; i++){
-            ll x; cin >> x;
-            if(i == 1){
-                arr[x] = true;
-            }
-            else{
-                if(arr[x-1] == true || arr[x+1] == true) continue;
-                else{
-                    flag = true;
-                }
-            }
-        }
-        if(flag == true) cout << "NO" << endl;
-        else cout << "YES" << endl;
     }
+    if (flag) cout << "NO" << endl;
+    else cout << "YES" << endl;
+}
+int main(){
+    ll t; cin >> t;
+    while(t--){
+        solve();
+    }
+
     return 0;
 }
-
 
