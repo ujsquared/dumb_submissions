@@ -11,6 +11,13 @@ echo "
 using namespace std;
 typedef long long ll;
 
+void printVector(vector<int>& arr){
+    for(ll i = 0; i < arr.size(); i++){
+        cout << arr[i] << ' ';
+    }
+    cout << endl;
+}
+
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
